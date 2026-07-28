@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,20 +26,23 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        
+
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
+
         ::-webkit-scrollbar-track {
-            background: #0f172a; 
+            background: #0f172a;
         }
+
         ::-webkit-scrollbar-thumb {
-            background: #3b82f6; 
+            background: #3b82f6;
             border-radius: 4px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
-            background: #2563eb; 
+            background: #2563eb;
         }
 
         .glass-card {
@@ -46,7 +50,7 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
+
         /* Profile Image Animation */
         .profile-blob {
             border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
@@ -56,11 +60,19 @@
         }
 
         @keyframes morph {
-            0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-            50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
-            100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+            0% {
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            }
+
+            50% {
+                border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+            }
+
+            100% {
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            }
         }
-        
+
         .blob {
             position: absolute;
             filter: blur(80px);
@@ -70,13 +82,25 @@
         }
 
         @keyframes float {
-            0% { transform: translate(0px, 0px) scale(1); }
-            33% { transform: translate(30px, -50px) scale(1.1); }
-            66% { transform: translate(-20px, 20px) scale(0.9); }
-            100% { transform: translate(0px, 0px) scale(1); }
+            0% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
         }
     </style>
 </head>
+
 <body class="bg-accent text-slate-200 font-sans antialiased selection:bg-primary selection:text-white">
 
     <!-- Navigation -->
@@ -84,21 +108,30 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0 cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <span class="text-2xl font-bold text-white tracking-tighter"><span class="text-primary">&lt;</span>Hifas<span class="text-primary">/&gt;</span></span>
+                    <span class="text-2xl font-bold text-white tracking-tighter"><span
+                            class="text-primary">&lt;</span>Hifas<span class="text-primary">/&gt;</span></span>
                 </div>
                 <!-- Desktop Menu -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#about" class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">About</a>
-                        <a href="#education" class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Education</a>
-                        <a href="#skills" class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Skills</a>
-                        <a href="#projects" class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Projects</a>
-                        <a href="#contact" class="px-4 py-2 rounded-full bg-primary hover:bg-blue-600 text-white text-sm font-medium transition-all transform hover:scale-105">Hire Me</a>
+                        <a href="#about"
+                            class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#education"
+                            class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Education</a>
+                        <a href="#skills"
+                            class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#projects"
+                            class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="#contact"
+                            class="px-4 py-2 rounded-full bg-primary hover:bg-blue-600 text-white text-sm font-medium transition-all transform hover:scale-105">Hire
+                            Me</a>
                     </div>
                 </div>
                 <!-- Mobile Menu Button -->
                 <div class="-mr-2 flex md:hidden">
-                    <button type="button" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                    <button type="button" onclick="toggleMobileMenu()"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
                         <i class="fas fa-bars text-xl" id="menu-icon"></i>
                     </button>
@@ -109,64 +142,84 @@
         <!-- Mobile Menu Panel -->
         <div class="hidden md:hidden bg-secondary border-t border-gray-700 shadow-xl absolute w-full" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#about" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">About</a>
-                <a href="#education" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">Education</a>
-                <a href="#skills" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">Skills</a>
-                <a href="#projects" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">Projects</a>
-                <a href="#contact" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-primary font-bold bg-gray-900 mt-2">Hire Me</a>
+                <a href="#about" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">About</a>
+                <a href="#education" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">Education</a>
+                <a href="#skills" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">Skills</a>
+                <a href="#projects" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 transition-colors">Projects</a>
+                <a href="#contact" onclick="toggleMobileMenu()"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-primary font-bold bg-gray-900 mt-2">Hire
+                    Me</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="about" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden scroll-mt-20">
+    <section id="about"
+        class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden scroll-mt-20">
         <!-- Background Blobs -->
         <div class="blob bg-blue-600 w-64 h-64 md:w-96 md:h-96 rounded-full top-20 left-0 blur-3xl opacity-20"></div>
-        <div class="blob bg-purple-600 w-64 h-64 md:w-96 md:h-96 rounded-full bottom-20 right-0 blur-3xl opacity-20 animation-delay-2000"></div>
+        <div
+            class="blob bg-purple-600 w-64 h-64 md:w-96 md:h-96 rounded-full bottom-20 right-0 blur-3xl opacity-20 animation-delay-2000">
+        </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div class="flex flex-col-reverse md:flex-row items-center justify-center gap-8 md:gap-12">
-                
+
                 <!-- Text Content -->
                 <div class="text-center md:text-left md:w-1/2 w-full">
-                    <h2 class="text-primary font-semibold tracking-wide uppercase text-sm mb-4">Software Engineering Undergraduate</h2>
+                    <h2 class="text-primary font-semibold tracking-wide uppercase text-sm mb-4">Software Engineering
+                        Undergraduate</h2>
                     <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
                         Hi, I'm <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Hifas Ahamath</span>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Hifas
+                            Ahamath</span>
                     </h1>
                     <p class="mt-4 max-w-lg mx-auto md:mx-0 text-lg md:text-xl text-gray-400">
-                        Motivated and detail-oriented developer pursuing a BEng (Hons). I specialize in building efficient systems with clean code and innovative technologies.
+                        Motivated and detail-oriented developer pursuing a BEng (Hons). I specialize in building
+                        efficient systems with clean code and innovative technologies.
                     </p>
                     <div class="mt-8 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-                        <a href="#projects" class="w-full sm:w-auto px-8 py-3 rounded-full bg-primary hover:bg-blue-600 text-white font-bold text-lg transition-all shadow-lg shadow-blue-500/30 transform hover:-translate-y-1 text-center">View Work</a>
-                        
+                        <a href="#projects"
+                            class="w-full sm:w-auto px-8 py-3 rounded-full bg-primary hover:bg-blue-600 text-white font-bold text-lg transition-all shadow-lg shadow-blue-500/30 transform hover:-translate-y-1 text-center">View
+                            Work</a>
+
                         <!-- Added 'download' attribute. This forces the browser to download 'cv.pdf' as 'Hifas_Ahamath_CV.pdf' -->
-                        <a href="cv.pdf" download="Hifas_Ahamath_CV.pdf" class="w-full sm:w-auto px-8 py-3 rounded-full bg-gray-800 hover:bg-gray-700 text-white font-bold text-lg transition-all border border-gray-600 hover:border-gray-500 flex items-center justify-center gap-2 group">
+                        <a href="cv.pdf" download="Hifas_Ahamath_CV.pdf"
+                            class="w-full sm:w-auto px-8 py-3 rounded-full bg-gray-800 hover:bg-gray-700 text-white font-bold text-lg transition-all border border-gray-600 hover:border-gray-500 flex items-center justify-center gap-2 group">
                             <span>Download CV</span>
                             <i class="fas fa-download text-sm group-hover:translate-y-1 transition-transform"></i>
                         </a>
                     </div>
-                    
+
                     <div class="mt-8 flex justify-center md:justify-start space-x-6 text-gray-400">
-                        <a href="https://github.com/hifasahamath" target="_blank" class="hover:text-white transition-colors text-2xl p-2"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/hifasahamath/" target="_blank" class="hover:text-blue-400 transition-colors text-2xl p-2"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:hifasahamath@gmail.com" class="hover:text-blue-300 transition-colors text-2xl p-2"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/hifasahamath" target="_blank"
+                            class="hover:text-white transition-colors text-2xl p-2"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/hifasahamath/" target="_blank"
+                            class="hover:text-blue-400 transition-colors text-2xl p-2"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="mailto:hifasahamath@gmail.com"
+                            class="hover:text-blue-300 transition-colors text-2xl p-2"><i
+                                class="fas fa-envelope"></i></a>
                     </div>
                 </div>
 
                 <!-- Profile Picture -->
                 <div class="md:w-1/2 flex justify-center w-full">
                     <div class="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80">
-                        <img src="hifas.jpg" 
-                             alt="Hifas Ahamath" 
-                             class="w-full h-full object-cover profile-blob shadow-2xl shadow-blue-500/20">
+                        <img src="hifas.jpg" alt="Hifas Ahamath"
+                            class="w-full h-full object-cover profile-blob shadow-2xl shadow-blue-500/20">
                     </div>
                 </div>
 
             </div>
         </div>
-        
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-gray-500 hidden md:block">
+
+        <div
+            class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-gray-500 hidden md:block">
             <i class="fas fa-chevron-down text-2xl"></i>
         </div>
     </section>
@@ -182,55 +235,75 @@
             <div class="max-w-4xl mx-auto relative">
                 <!-- Vertical Line (Desktop: Center, Mobile: Left) -->
                 <div class="absolute left-6 md:left-1/2 h-full w-0.5 bg-gray-700 transform md:-translate-x-1/2"></div>
-                
+
                 <!-- Degree -->
-                <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-12 relative group pl-12 md:pl-0">
+                <div
+                    class="flex flex-col md:flex-row items-start md:items-center justify-between mb-12 relative group pl-12 md:pl-0">
                     <div class="md:w-5/12 md:text-right order-1 md:order-1 md:pr-8 w-full">
-                        <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">BEng (Hons) in Software Engineering</h3>
+                        <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">BEng (Hons)
+                            in Software Engineering</h3>
                         <p class="text-blue-400 font-medium">London Metropolitan University (UK)</p>
-                        <p class="text-gray-400 mt-2 text-sm">Focusing on advanced software development and research.</p>
-                        <span class="inline-block mt-2 px-3 py-1 bg-blue-900/30 text-blue-300 text-xs rounded-full border border-blue-800">09/2025 - Present</span>
+                        <p class="text-gray-400 mt-2 text-sm">Focusing on advanced software development and research.
+                        </p>
+                        <span
+                            class="inline-block mt-2 px-3 py-1 bg-blue-900/30 text-blue-300 text-xs rounded-full border border-blue-800">09/2025
+                            - Present</span>
                     </div>
                     <!-- Timeline Dot -->
-                    <div class="absolute left-[22px] md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 md:w-8 md:h-8 rounded-full bg-primary border-2 md:border-4 border-gray-900 z-10 top-1 md:top-auto"></div>
-                    
+                    <div
+                        class="absolute left-[22px] md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 md:w-8 md:h-8 rounded-full bg-primary border-2 md:border-4 border-gray-900 z-10 top-1 md:top-auto">
+                    </div>
+
                     <div class="md:w-5/12 md:pl-8 order-2 md:order-2 hidden md:block">
-                        <span class="text-5xl font-bold text-gray-800 absolute top-[-10px] right-[-10px] md:static z-0 opacity-20">2025</span>
+                        <span
+                            class="text-5xl font-bold text-gray-800 absolute top-[-10px] right-[-10px] md:static z-0 opacity-20">2025</span>
                     </div>
                 </div>
 
                 <!-- HND -->
-                <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 relative group pl-12 md:pl-0">
-                     <div class="md:w-5/12 md:text-right order-2 md:order-1 pr-8 hidden md:block">
+                <div
+                    class="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 relative group pl-12 md:pl-0">
+                    <div class="md:w-5/12 md:text-right order-2 md:order-1 pr-8 hidden md:block">
                         <span class="text-5xl font-bold text-gray-800 opacity-20">2023</span>
                     </div>
                     <!-- Timeline Dot -->
-                    <div class="absolute left-[22px] md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 md:w-8 md:h-8 rounded-full bg-yellow-500 border-2 md:border-4 border-gray-900 z-10 top-1 md:top-auto" title="Top Performer Award"></div>
-                    
+                    <div class="absolute left-[22px] md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 md:w-8 md:h-8 rounded-full bg-yellow-500 border-2 md:border-4 border-gray-900 z-10 top-1 md:top-auto"
+                        title="Top Performer Award"></div>
+
                     <div class="md:w-5/12 order-1 md:order-2 md:pl-8 text-left w-full">
-                        <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">HND in Software Engineering</h3>
+                        <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">HND in
+                            Software Engineering</h3>
                         <p class="text-blue-400 font-medium">Esoft Metro Campus</p>
                         <p class="text-gray-400 mt-2 text-sm">
-                            <span class="text-yellow-400"><i class="fas fa-trophy mr-1"></i> Top Performer 2025</span><br>
+                            <span class="text-yellow-400"><i class="fas fa-trophy mr-1"></i> Top Performer
+                                2025</span><br>
                             Achieved 15 Distinctions and 1 Merit.
                         </p>
-                         <span class="inline-block mt-2 px-3 py-1 bg-gray-800 text-gray-400 text-xs rounded-full border border-gray-700">2023 - 2025</span>
+                        <span
+                            class="inline-block mt-2 px-3 py-1 bg-gray-800 text-gray-400 text-xs rounded-full border border-gray-700">2023
+                            - 2025</span>
                     </div>
                 </div>
 
                 <!-- Diploma in English -->
-                <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 relative group pl-12 md:pl-0">
+                <div
+                    class="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 relative group pl-12 md:pl-0">
                     <div class="md:w-5/12 md:text-right order-1 md:order-1 md:pr-8 w-full">
-                        <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Diploma in English</h3>
+                        <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Diploma in
+                            English</h3>
                         <p class="text-blue-400 font-medium">Esoft Metro Campus</p>
                         <p class="text-gray-400 mt-2 text-sm">Successfully completed with Merit.</p>
-                        <span class="inline-block mt-2 px-3 py-1 bg-gray-800 text-gray-400 text-xs rounded-full border border-gray-700">2023</span>
+                        <span
+                            class="inline-block mt-2 px-3 py-1 bg-gray-800 text-gray-400 text-xs rounded-full border border-gray-700">2023</span>
                     </div>
                     <!-- Timeline Dot -->
-                    <div class="absolute left-[22px] md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 md:w-8 md:h-8 rounded-full bg-purple-500 border-2 md:border-4 border-gray-900 z-10 top-1 md:top-auto"></div>
-                    
+                    <div
+                        class="absolute left-[22px] md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 md:w-8 md:h-8 rounded-full bg-purple-500 border-2 md:border-4 border-gray-900 z-10 top-1 md:top-auto">
+                    </div>
+
                     <div class="md:w-5/12 md:pl-8 order-2 md:order-2 hidden md:block">
-                        <span class="text-5xl font-bold text-gray-800 absolute top-[-10px] right-[-10px] md:static z-0 opacity-20">2023</span>
+                        <span
+                            class="text-5xl font-bold text-gray-800 absolute top-[-10px] right-[-10px] md:static z-0 opacity-20">2023</span>
                     </div>
                 </div>
 
@@ -248,28 +321,32 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Skill Card 1 -->
-                <div class="glass-card p-6 rounded-xl hover:bg-gray-800/50 transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-yellow-500">
+                <div
+                    class="glass-card p-6 rounded-xl hover:bg-gray-800/50 transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-yellow-500">
                     <div class="text-4xl text-yellow-500 mb-4"><i class="fab fa-js"></i></div>
                     <h3 class="text-xl font-bold text-white mb-2">JavaScript & React</h3>
                     <p class="text-gray-400 text-sm">Building dynamic web interfaces and single-page applications.</p>
                 </div>
-                
+
                 <!-- Skill Card 2 -->
-                <div class="glass-card p-6 rounded-xl hover:bg-gray-800/50 transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-blue-600">
+                <div
+                    class="glass-card p-6 rounded-xl hover:bg-gray-800/50 transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-blue-600">
                     <div class="text-4xl text-blue-600 mb-4"><i class="fab fa-python"></i></div>
                     <h3 class="text-xl font-bold text-white mb-2">Python</h3>
                     <p class="text-gray-400 text-sm">Data analysis (Sales Systems), automation, and scripting.</p>
                 </div>
 
                 <!-- Skill Card 3 -->
-                <div class="glass-card p-6 rounded-xl hover:bg-gray-800/50 transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-purple-500">
+                <div
+                    class="glass-card p-6 rounded-xl hover:bg-gray-800/50 transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-purple-500">
                     <div class="text-4xl text-purple-500 mb-4"><i class="fas fa-code"></i></div>
                     <h3 class="text-xl font-bold text-white mb-2">C# & .NET</h3>
                     <p class="text-gray-400 text-sm">Desktop application development (Payroll, Employee Management).</p>
                 </div>
 
                 <!-- Skill Card 4 -->
-                <div class="glass-card p-6 rounded-xl hover:bg-gray-800/50 transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-orange-500">
+                <div
+                    class="glass-card p-6 rounded-xl hover:bg-gray-800/50 transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-orange-500">
                     <div class="text-4xl text-orange-500 mb-4"><i class="fab fa-java"></i></div>
                     <h3 class="text-xl font-bold text-white mb-2">Java</h3>
                     <p class="text-gray-400 text-sm">Object-oriented programming and system logic (Bus Reservation).</p>
@@ -280,11 +357,18 @@
             <div class="mt-12 text-center">
                 <h3 class="text-xl font-semibold text-white mb-6">Tools & Platforms</h3>
                 <div class="flex flex-wrap justify-center gap-3">
-                    <span class="px-4 py-2 bg-gray-800 rounded-full text-gray-300 text-sm border border-gray-700">Git & GitHub</span>
-                    <span class="px-4 py-2 bg-gray-800 rounded-full text-gray-300 text-sm border border-gray-700">PHP & MySQL</span>
-                    <span class="px-4 py-2 bg-gray-800 rounded-full text-gray-300 text-sm border border-gray-700">Figma UI/UX</span>
-                    <span class="px-4 py-2 bg-gray-800 rounded-full text-gray-300 text-sm border border-gray-700">Microsoft Office</span>
-                    <span class="px-4 py-2 bg-gray-800 rounded-full text-gray-300 text-sm border border-gray-700">Tailwind CSS</span>
+                    <span class="px-4 py-2 bg-gray-800 rounded-full text-gray-300 text-sm border border-gray-700">Git &
+                        GitHub</span>
+                    <span class="px-4 py-2 bg-gray-800 rounded-full text-gray-300 text-sm border border-gray-700">PHP &
+                        MySQL</span>
+                    <span class="px-4 py-2 bg-gray-800 rounded-full text-gray-300 text-sm border border-gray-700">Figma
+                        UI/UX</span>
+                    <span
+                        class="px-4 py-2 bg-gray-800 rounded-full text-gray-300 text-sm border border-gray-700">Microsoft
+                        Office</span>
+                    <span
+                        class="px-4 py-2 bg-gray-800 rounded-full text-gray-300 text-sm border border-gray-700">Tailwind
+                        CSS</span>
                 </div>
             </div>
         </div>
@@ -295,29 +379,42 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12">
                 <div class="w-full md:w-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-2 text-center md:text-left">Featured Projects</h2>
-                    <p class="text-gray-400 text-center md:text-left">Highlights from my academic and practical work.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-2 text-center md:text-left">Featured
+                        Projects</h2>
+                    <p class="text-gray-400 text-center md:text-left">Highlights from my academic and practical work.
+                    </p>
                 </div>
                 <!-- Desktop Link -->
-                <a href="https://github.com/hifasahamath" target="_blank" class="hidden md:inline-block text-primary hover:text-white transition-colors mt-4 md:mt-0">View All on Github <i class="fas fa-arrow-right ml-1"></i></a>
+                <a href="https://github.com/hifasahamath" target="_blank"
+                    class="hidden md:inline-block text-primary hover:text-white transition-colors mt-4 md:mt-0">View All
+                    on Github <i class="fas fa-arrow-right ml-1"></i></a>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
+
                 <!-- Project 1: Velvet Vogue -->
-                <div class="group rounded-xl overflow-hidden bg-accent border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
-                    <div class="h-48 bg-gradient-to-br from-pink-900 to-gray-900 flex items-center justify-center relative overflow-hidden">
-                         <i class="fas fa-tshirt text-6xl text-pink-500/50 group-hover:scale-110 transition-transform duration-500"></i>
-                         <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                             <a href="https://github.com/hifasahamath/Velvet-Vogue-E-commerce-Clothing-Website.git" target="_blank" class="p-3 bg-white rounded-full text-black hover:bg-primary hover:text-white transition-colors" title="View Code"><i class="fab fa-github text-xl"></i></a>
-                         </div>
+                <div
+                    class="group rounded-xl overflow-hidden bg-accent border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
+                    <div
+                        class="h-48 bg-gradient-to-br from-pink-900 to-gray-900 flex items-center justify-center relative overflow-hidden">
+                        <i
+                            class="fas fa-tshirt text-6xl text-pink-500/50 group-hover:scale-110 transition-transform duration-500"></i>
+                        <div
+                            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                            <a href="https://github.com/hifasahamath/Velvet-Vogue-E-commerce-Clothing-Website.git"
+                                target="_blank"
+                                class="p-3 bg-white rounded-full text-black hover:bg-primary hover:text-white transition-colors"
+                                title="View Code"><i class="fab fa-github text-xl"></i></a>
+                        </div>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-xl font-bold text-white">Velvet Vogue E-Commerce</h3>
-                            <span class="text-xs font-mono text-pink-400 bg-pink-400/10 px-2 py-1 rounded">Web App</span>
+                            <span class="text-xs font-mono text-pink-400 bg-pink-400/10 px-2 py-1 rounded">Web
+                                App</span>
                         </div>
-                        <p class="text-gray-400 text-sm mb-4">A complete clothing website featuring product listings and user management.</p>
+                        <p class="text-gray-400 text-sm mb-4">A complete clothing website featuring product listings and
+                            user management.</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs text-gray-500 px-2 py-1 bg-gray-800 rounded">PHP</span>
                             <span class="text-xs text-gray-500 px-2 py-1 bg-gray-800 rounded">MySQL</span>
@@ -327,19 +424,26 @@
                 </div>
 
                 <!-- Project 2: Bus Reservation -->
-                <div class="group rounded-xl overflow-hidden bg-accent border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
-                    <div class="h-48 bg-gradient-to-br from-blue-900 to-gray-900 flex items-center justify-center relative overflow-hidden">
-                        <i class="fas fa-bus text-6xl text-blue-500/50 group-hover:scale-110 transition-transform duration-500"></i>
-                         <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                             <a href="https://github.com/hifasahamath/Bus-Reservation-System.git" target="_blank" class="p-3 bg-white rounded-full text-black hover:bg-primary hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
-                         </div>
+                <div
+                    class="group rounded-xl overflow-hidden bg-accent border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
+                    <div
+                        class="h-48 bg-gradient-to-br from-blue-900 to-gray-900 flex items-center justify-center relative overflow-hidden">
+                        <i
+                            class="fas fa-bus text-6xl text-blue-500/50 group-hover:scale-110 transition-transform duration-500"></i>
+                        <div
+                            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                            <a href="https://github.com/hifasahamath/Bus-Reservation-System.git" target="_blank"
+                                class="p-3 bg-white rounded-full text-black hover:bg-primary hover:text-white transition-colors"><i
+                                    class="fab fa-github text-xl"></i></a>
+                        </div>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-xl font-bold text-white">Bus Reservation System</h3>
                             <span class="text-xs font-mono text-blue-400 bg-blue-400/10 px-2 py-1 rounded">System</span>
                         </div>
-                        <p class="text-gray-400 text-sm mb-4">An efficient seat booking and reservation management system built with robust logic.</p>
+                        <p class="text-gray-400 text-sm mb-4">An efficient seat booking and reservation management
+                            system built with robust logic.</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs text-gray-500 px-2 py-1 bg-gray-800 rounded">Java</span>
                             <span class="text-xs text-gray-500 px-2 py-1 bg-gray-800 rounded">OOP</span>
@@ -349,19 +453,26 @@
                 </div>
 
                 <!-- Project 3: Sales Analysis -->
-                <div class="group rounded-xl overflow-hidden bg-accent border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
-                    <div class="h-48 bg-gradient-to-br from-green-900 to-gray-900 flex items-center justify-center relative overflow-hidden">
-                        <i class="fas fa-chart-line text-6xl text-green-500/50 group-hover:scale-110 transition-transform duration-500"></i>
-                         <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                             <a href="https://github.com/hifasahamath/Sales-Analysis-System.git" target="_blank" class="p-3 bg-white rounded-full text-black hover:bg-primary hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
-                         </div>
+                <div
+                    class="group rounded-xl overflow-hidden bg-accent border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
+                    <div
+                        class="h-48 bg-gradient-to-br from-green-900 to-gray-900 flex items-center justify-center relative overflow-hidden">
+                        <i
+                            class="fas fa-chart-line text-6xl text-green-500/50 group-hover:scale-110 transition-transform duration-500"></i>
+                        <div
+                            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                            <a href="https://github.com/hifasahamath/Sales-Analysis-System.git" target="_blank"
+                                class="p-3 bg-white rounded-full text-black hover:bg-primary hover:text-white transition-colors"><i
+                                    class="fab fa-github text-xl"></i></a>
+                        </div>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-xl font-bold text-white">Sales Analysis System</h3>
                             <span class="text-xs font-mono text-green-400 bg-green-400/10 px-2 py-1 rounded">Data</span>
                         </div>
-                        <p class="text-gray-400 text-sm mb-4">A data analysis and reporting tool designed to interpret sales metrics.</p>
+                        <p class="text-gray-400 text-sm mb-4">A data analysis and reporting tool designed to interpret
+                            sales metrics.</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs text-gray-500 px-2 py-1 bg-gray-800 rounded">Python</span>
                             <span class="text-xs text-gray-500 px-2 py-1 bg-gray-800 rounded">Data Analytics</span>
@@ -370,19 +481,27 @@
                 </div>
 
                 <!-- Project 4: Employee Management -->
-                <div class="group rounded-xl overflow-hidden bg-accent border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
-                    <div class="h-48 bg-gradient-to-br from-purple-900 to-gray-900 flex items-center justify-center relative overflow-hidden">
-                        <i class="fas fa-users-cog text-6xl text-purple-500/50 group-hover:scale-110 transition-transform duration-500"></i>
-                         <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                             <a href="https://github.com/hifasahamath/Employee-Management-System.git" target="_blank" class="p-3 bg-white rounded-full text-black hover:bg-primary hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
-                         </div>
+                <div
+                    class="group rounded-xl overflow-hidden bg-accent border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
+                    <div
+                        class="h-48 bg-gradient-to-br from-purple-900 to-gray-900 flex items-center justify-center relative overflow-hidden">
+                        <i
+                            class="fas fa-users-cog text-6xl text-purple-500/50 group-hover:scale-110 transition-transform duration-500"></i>
+                        <div
+                            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                            <a href="https://github.com/hifasahamath/Employee-Management-System.git" target="_blank"
+                                class="p-3 bg-white rounded-full text-black hover:bg-primary hover:text-white transition-colors"><i
+                                    class="fab fa-github text-xl"></i></a>
+                        </div>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-xl font-bold text-white">Employee Management</h3>
-                            <span class="text-xs font-mono text-purple-400 bg-purple-400/10 px-2 py-1 rounded">Desktop</span>
+                            <span
+                                class="text-xs font-mono text-purple-400 bg-purple-400/10 px-2 py-1 rounded">Desktop</span>
                         </div>
-                        <p class="text-gray-400 text-sm mb-4">Desktop application handling CRUD operations and employee data management.</p>
+                        <p class="text-gray-400 text-sm mb-4">Desktop application handling CRUD operations and employee
+                            data management.</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs text-gray-500 px-2 py-1 bg-gray-800 rounded">C#</span>
                             <span class="text-xs text-gray-500 px-2 py-1 bg-gray-800 rounded">.NET</span>
@@ -392,19 +511,27 @@
                 </div>
 
                 <!-- Project 5: Payroll System -->
-                <div class="group rounded-xl overflow-hidden bg-accent border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
-                    <div class="h-48 bg-gradient-to-br from-indigo-900 to-gray-900 flex items-center justify-center relative overflow-hidden">
-                        <i class="fas fa-file-invoice-dollar text-6xl text-indigo-500/50 group-hover:scale-110 transition-transform duration-500"></i>
-                         <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                             <a href="https://github.com/hifasahamath/Payroll-System.git" target="_blank" class="p-3 bg-white rounded-full text-black hover:bg-primary hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
-                         </div>
+                <div
+                    class="group rounded-xl overflow-hidden bg-accent border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
+                    <div
+                        class="h-48 bg-gradient-to-br from-indigo-900 to-gray-900 flex items-center justify-center relative overflow-hidden">
+                        <i
+                            class="fas fa-file-invoice-dollar text-6xl text-indigo-500/50 group-hover:scale-110 transition-transform duration-500"></i>
+                        <div
+                            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                            <a href="https://github.com/hifasahamath/Payroll-System.git" target="_blank"
+                                class="p-3 bg-white rounded-full text-black hover:bg-primary hover:text-white transition-colors"><i
+                                    class="fab fa-github text-xl"></i></a>
+                        </div>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-xl font-bold text-white">Payroll System</h3>
-                            <span class="text-xs font-mono text-indigo-400 bg-indigo-400/10 px-2 py-1 rounded">Automation</span>
+                            <span
+                                class="text-xs font-mono text-indigo-400 bg-indigo-400/10 px-2 py-1 rounded">Automation</span>
                         </div>
-                        <p class="text-gray-400 text-sm mb-4">Automated payroll processing system for calculating and managing employee salaries.</p>
+                        <p class="text-gray-400 text-sm mb-4">Automated payroll processing system for calculating and
+                            managing employee salaries.</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs text-gray-500 px-2 py-1 bg-gray-800 rounded">C#</span>
                             <span class="text-xs text-gray-500 px-2 py-1 bg-gray-800 rounded">WinForms</span>
@@ -413,16 +540,21 @@
                 </div>
 
                 <!-- Project 6: E-Video Cloud App -->
-                <div class="group rounded-xl overflow-hidden bg-accent border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
-                    <div class="h-48 bg-gradient-to-br from-orange-900 to-gray-900 flex items-center justify-center relative overflow-hidden">
-                        <i class="fas fa-play-circle text-6xl text-orange-500/50 group-hover:scale-110 transition-transform duration-500"></i>
+                <div
+                    class="group rounded-xl overflow-hidden bg-accent border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
+                    <div
+                        class="h-48 bg-gradient-to-br from-orange-900 to-gray-900 flex items-center justify-center relative overflow-hidden">
+                        <i
+                            class="fas fa-play-circle text-6xl text-orange-500/50 group-hover:scale-110 transition-transform duration-500"></i>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-xl font-bold text-white">E-Video Cloud App</h3>
-                            <span class="text-xs font-mono text-orange-400 bg-orange-400/10 px-2 py-1 rounded">UI/UX</span>
+                            <span
+                                class="text-xs font-mono text-orange-400 bg-orange-400/10 px-2 py-1 rounded">UI/UX</span>
                         </div>
-                        <p class="text-gray-400 text-sm mb-4">Modern video streaming application design and user interface prototype.</p>
+                        <p class="text-gray-400 text-sm mb-4">Modern video streaming application design and user
+                            interface prototype.</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs text-gray-500 px-2 py-1 bg-gray-800 rounded">Figma</span>
                             <span class="text-xs text-gray-500 px-2 py-1 bg-gray-800 rounded">Prototyping</span>
@@ -431,16 +563,20 @@
                 </div>
 
                 <!-- Project 7: Library Management -->
-                <div class="group rounded-xl overflow-hidden bg-accent border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
-                    <div class="h-48 bg-gradient-to-br from-teal-900 to-gray-900 flex items-center justify-center relative overflow-hidden">
-                        <i class="fas fa-book-reader text-6xl text-teal-500/50 group-hover:scale-110 transition-transform duration-500"></i>
+                <div
+                    class="group rounded-xl overflow-hidden bg-accent border border-gray-800 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
+                    <div
+                        class="h-48 bg-gradient-to-br from-teal-900 to-gray-900 flex items-center justify-center relative overflow-hidden">
+                        <i
+                            class="fas fa-book-reader text-6xl text-teal-500/50 group-hover:scale-110 transition-transform duration-500"></i>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="text-xl font-bold text-white">Library Management</h3>
                             <span class="text-xs font-mono text-teal-400 bg-teal-400/10 px-2 py-1 rounded">Design</span>
                         </div>
-                        <p class="text-gray-400 text-sm mb-4">Conceptual design and user interface for a library book tracking system.</p>
+                        <p class="text-gray-400 text-sm mb-4">Conceptual design and user interface for a library book
+                            tracking system.</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs text-gray-500 px-2 py-1 bg-gray-800 rounded">Figma</span>
                             <span class="text-xs text-gray-500 px-2 py-1 bg-gray-800 rounded">UI Design</span>
@@ -450,16 +586,18 @@
 
             </div>
 
-             <!-- Mobile View All Link -->
-             <div class="mt-8 text-center md:hidden">
-                <a href="https://github.com/hifasahamath" target="_blank" class="inline-block text-primary hover:text-white transition-colors">View All on Github <i class="fas fa-arrow-right ml-1"></i></a>
-             </div>
+            <!-- Mobile View All Link -->
+            <div class="mt-8 text-center md:hidden">
+                <a href="https://github.com/hifasahamath" target="_blank"
+                    class="inline-block text-primary hover:text-white transition-colors">View All on Github <i
+                        class="fas fa-arrow-right ml-1"></i></a>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 relative scroll-mt-20">
-         <div class="blob bg-blue-900 w-64 h-64 md:w-96 md:h-96 rounded-full top-0 left-1/3 blur-3xl opacity-20"></div>
+        <div class="blob bg-blue-900 w-64 h-64 md:w-96 md:h-96 rounded-full top-0 left-1/3 blur-3xl opacity-20"></div>
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="glass-card rounded-2xl p-6 md:p-12 text-center border border-gray-700 shadow-2xl">
                 <h2 class="text-3xl font-bold text-white mb-6">Let's Connect</h2>
@@ -467,17 +605,20 @@
                     Based in <span class="text-white font-semibold">Batticaloa, Sri Lanka</span>. <br>
                     I'm currently open to new opportunities and collaborations.
                 </p>
-                
+
                 <div class="flex flex-wrap justify-center gap-4 md:gap-6 mb-10">
-                    <a href="mailto:hifasahamath@gmail.com" class="flex items-center justify-center gap-3 px-6 py-4 bg-gray-800 hover:bg-gray-700 rounded-lg text-white transition-all group w-full md:w-auto">
+                    <a href="mailto:hifasahamath@gmail.com"
+                        class="flex items-center justify-center gap-3 px-6 py-4 bg-gray-800 hover:bg-gray-700 rounded-lg text-white transition-all group w-full md:w-auto">
                         <i class="fas fa-envelope text-primary group-hover:scale-110 transition-transform"></i>
                         <span class="text-sm md:text-base">hifasahamath@gmail.com</span>
                     </a>
-                    <a href="tel:0775605161" class="flex items-center justify-center gap-3 px-6 py-4 bg-gray-800 hover:bg-gray-700 rounded-lg text-white transition-all group w-full md:w-auto">
+                    <a href="tel:0775605161"
+                        class="flex items-center justify-center gap-3 px-6 py-4 bg-gray-800 hover:bg-gray-700 rounded-lg text-white transition-all group w-full md:w-auto">
                         <i class="fas fa-phone text-primary group-hover:scale-110 transition-transform"></i>
                         <span class="text-sm md:text-base">077 560 5161</span>
                     </a>
-                    <a href="https://wa.me/94775605161" target="_blank" class="flex items-center justify-center gap-3 px-6 py-4 bg-gray-800 hover:bg-gray-700 rounded-lg text-white transition-all group w-full md:w-auto">
+                    <a href="https://wa.me/94775605161" target="_blank"
+                        class="flex items-center justify-center gap-3 px-6 py-4 bg-gray-800 hover:bg-gray-700 rounded-lg text-white transition-all group w-full md:w-auto">
                         <i class="fab fa-whatsapp text-green-400 group-hover:scale-110 transition-transform"></i>
                         <span class="text-sm md:text-base">WhatsApp</span>
                     </a>
@@ -495,18 +636,25 @@
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-400 mb-1">Name</label>
                             <!-- 'name' attribute is required for Formspree to read the data -->
-                            <input type="text" id="name" name="name" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="Your Name">
+                            <input type="text" id="name" name="name" required
+                                class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                                placeholder="Your Name">
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-400 mb-1">Email</label>
-                            <input type="email" id="email" name="email" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="you@example.com">
+                            <input type="email" id="email" name="email" required
+                                class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                                placeholder="you@example.com">
                         </div>
                     </div>
                     <div>
                         <label for="message" class="block text-sm font-medium text-gray-400 mb-1">Message</label>
-                        <textarea id="message" name="message" rows="4" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="Write your message..."></textarea>
+                        <textarea id="message" name="message" rows="4" required
+                            class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                            placeholder="Write your message..."></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-bold py-4 rounded-lg transition-all shadow-lg shadow-blue-900/20">
+                    <button type="submit"
+                        class="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-bold py-4 rounded-lg transition-all shadow-lg shadow-blue-900/20">
                         Send Message
                     </button>
                 </form>
@@ -518,7 +666,8 @@
     <footer class="bg-accent py-8 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <p class="text-gray-500 text-sm">
-                &copy; <script>document.write(new Date().getFullYear())</script> Hifas Ahamath. All Rights Reserved.
+                &copy;
+                <script>document.write(new Date().getFullYear())</script> Hifas Ahamath. All Rights Reserved.
             </p>
         </div>
     </footer>
@@ -542,9 +691,9 @@
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('menu-icon');
-            
+
             menu.classList.toggle('hidden');
-            
+
             if (menu.classList.contains('hidden')) {
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
@@ -557,4 +706,3 @@
 </body>
 
 </html>
-
